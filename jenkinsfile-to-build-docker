@@ -1,0 +1,32 @@
+pipeline { 
+    agent any
+    environment {
+        Docker_Credentials = credentials('docker-hub')
+    }
+     stages {
+        stage('Build Docker Image') {
+            steps { 
+                sh 'docker build -t newimage:1.0 .'
+                }
+            }
+        stage('login to dockerhub'){
+            steps {
+            sh 'docker login -u Roopesh81022 -p Roopesh@123'
+            }
+        }
+
+        stage('push image'){
+            steps {
+                sh 'docker push newimage:1.0'
+            }
+        }
+    }
+         post { 
+            success { 
+                echo "Build is successfull" 
+            } 
+            failure { 
+                echo "Build failed" 
+            }
+        }
+    }
