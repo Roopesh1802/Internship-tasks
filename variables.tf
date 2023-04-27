@@ -40,12 +40,12 @@ variable "subnet2-region" {
 
 variable "sa-name"{
     type = string 
-    default = "terraform-for-task"
+    default = "my-terraform-for-task"
 }
 
 variable "sa-id"{
     type = string 
-    default = "terraform-sa"
+    default = "my-terraform-sa"
 }
 
 variable "cluster-name"{
