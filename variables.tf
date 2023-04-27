@@ -65,5 +65,5 @@ variable "nodepool-name"{
 
 variable "nodepool-location"{
     type = string 
-    default = "us-central1"
+    default = "us-central1-c"
 }
