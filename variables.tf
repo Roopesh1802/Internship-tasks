@@ -55,7 +55,7 @@ variable "cluster-name"{
 
 variable "cluster-location"{
     type = string 
-    default = "us-central1"
+    default = "us-central1-c"
 }
 
 variable "nodepool-name"{
