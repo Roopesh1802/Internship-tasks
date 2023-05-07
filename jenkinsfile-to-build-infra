@@ -21,7 +21,6 @@ pipeline {
             }   
          stage('gcloud authenticate & terraform apply') {
              steps {
-                sh 'gcloud compute instances create NAME --scopes=https://www.googleapis.com/auth/cloud-platform'
                 sh 'terraform apply --auto-approve'
                 }
                 
