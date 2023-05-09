@@ -44,7 +44,7 @@ resource "google_compute_subnetwork" "network-with-ip-ranges-1" {
  network  = google_compute_network.vpc_network.id
  private_ip_google_access = true
 }
-
+# creating service account
 resource "google_service_account" "service_account" {
   account_id   = var.sa-id
   display_name = var.sa-name
